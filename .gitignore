@@ -1,0 +1,6 @@
+# IDE Settings
+.classpath
+.project
+
+# Java
+bin/
