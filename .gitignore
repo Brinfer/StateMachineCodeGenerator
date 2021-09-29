@@ -1,6 +1,14 @@
 # IDE Settings
+.settings/
 .classpath
 .project
 
 # Java
 bin/
+*.xmi
+
+# EMF
+src-gen/
+
+# XTend
+xtend-gen/
