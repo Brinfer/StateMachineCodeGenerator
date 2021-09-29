@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated stateMachineCodeGenerator -->
+      <!-- @generated state_machine_code_generator -->
       <package
-            uri="http://www.example.org/stateMachineCodeGenerator"
-            class="stateMachineCodeGenerator.StateMachineCodeGeneratorPackage"
-            genModel="model/stateMachineCodeGenerator.genmodel"/>
+            uri="http://eseo.fr/stateMachineCodeGenerator"
+            class="fr.eseo.idm.state_machine_code_generator.State_machine_code_generatorPackage"
+            genModel="model/state_machine_code_generator.genmodel"/>
    </extension>
 
 </plugin>
