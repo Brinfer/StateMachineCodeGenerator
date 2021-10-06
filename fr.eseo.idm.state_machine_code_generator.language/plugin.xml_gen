@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://eseo.fr/stateMachineCodeGenerator"
+			class = "fr.eseo.idm.state_machine_code_generator.language.stateMachineCodeGenerator.StateMachineCodeGeneratorPackage"
+			genModel = "model/generated/StateMachineCodeGenerator.genmodel" />
+	</extension>
+</plugin>

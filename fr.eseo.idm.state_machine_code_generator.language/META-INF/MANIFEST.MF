@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: fr.eseo.idm.state_machine_code_generator.language
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.eseo.idm.state_machine_code_generator.language
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: fr.eseo.idm.state_machine_code_generator.language; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: fr.eseo.idm.state_machine_code_generator,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: fr.eseo.idm.state_machine_code_generator.language,
+ fr.eseo.idm.state_machine_code_generator.language.generator,
+ fr.eseo.idm.state_machine_code_generator.language.parser.antlr,
+ fr.eseo.idm.state_machine_code_generator.language.parser.antlr.internal,
+ fr.eseo.idm.state_machine_code_generator.language.scoping,
+ fr.eseo.idm.state_machine_code_generator.language.serializer,
+ fr.eseo.idm.state_machine_code_generator.language.services,
+ fr.eseo.idm.state_machine_code_generator.language.validation,
+ fr.eseo.idm.state_machine_code_generator.language.formatting2
+Import-Package: org.apache.log4j

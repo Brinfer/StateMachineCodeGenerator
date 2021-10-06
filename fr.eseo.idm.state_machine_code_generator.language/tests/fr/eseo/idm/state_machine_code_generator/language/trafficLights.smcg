@@ -1,0 +1,3 @@
+transition green -> yellow : greenToYellow / turnOffGreenTurnOnYellow
+transition yellow -> red : yellowToRed / turOffYellowTurOnRed
+transition red -> green : redToGreen / turnOffRedTurnOnGreen
