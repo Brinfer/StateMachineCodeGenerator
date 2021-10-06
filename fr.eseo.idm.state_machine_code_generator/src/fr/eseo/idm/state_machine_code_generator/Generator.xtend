@@ -17,7 +17,7 @@ class Generator {
     }
 
     def static toHTML(Transition transition) '''
-		Transition «transition.name»
+		Transition «transition.hashCode»
 		  <ul>
 		     	<li>Event : «transition.event.name»</li>
 		     	<li>Actions : «transition.action.name»</li>

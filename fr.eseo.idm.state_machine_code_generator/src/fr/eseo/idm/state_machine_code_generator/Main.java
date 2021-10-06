@@ -84,7 +84,6 @@ public class Main {
 	        passRedToGreen.setName("Pass Red to Green");
 
 	        Transition greenToYellow = State_machine_code_generatorFactory.eINSTANCE.createTransition();
-	        greenToYellow.setName("Green to Yellow");
 	        greenToYellow.setEvent(passGreenToYellow);
 	        greenToYellow.getStates().add(green);
 	        greenToYellow.getStates().add(yellow);
@@ -92,7 +91,6 @@ public class Main {
 	        greenToYellow.setAction(turnOnYellow);
 	
 	        Transition yellowToRed = State_machine_code_generatorFactory.eINSTANCE.createTransition();
-	        yellowToRed.setName("Yellow to Red");
 	        yellowToRed.setEvent(passYellowToRed);
 	        yellowToRed.getStates().add(yellow);
 	        yellowToRed.getStates().add(red);
@@ -100,7 +98,6 @@ public class Main {
 	        yellowToRed.setAction(turnOnRed);
 	
 	       Transition redToGreen = State_machine_code_generatorFactory.eINSTANCE.createTransition();
-	       redToGreen.setName("Red to Green");
 	       redToGreen.setEvent(passRedToGreen);
 	       redToGreen.getStates().add(red);
 	       redToGreen.getStates().add(green);

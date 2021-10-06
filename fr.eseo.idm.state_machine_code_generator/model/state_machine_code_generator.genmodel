@@ -24,7 +24,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference state_machine_code_generator.ecore#//Transition/states"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference state_machine_code_generator.ecore#//Transition/event"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference state_machine_code_generator.ecore#//Transition/action"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute state_machine_code_generator.ecore#//Transition/name"/>
     </genClasses>
     <genClasses ecoreClass="state_machine_code_generator.ecore#//Element"/>
     <genClasses ecoreClass="state_machine_code_generator.ecore#//StateMachine">
