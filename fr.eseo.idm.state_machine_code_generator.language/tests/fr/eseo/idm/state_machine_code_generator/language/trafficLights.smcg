@@ -1,3 +1,7 @@
-transition green -> yellow : greenToYellow / turnOffGreenTurnOnYellow
-transition yellow -> red : yellowToRed / turOffYellowTurOnRed
-transition red -> green : redToGreen / turnOffRedTurnOnGreen
+state green
+state yellow
+state red
+
+green -> yellow : greenToYellow / turnOffGreenTurnOnYellow
+yellow -> red : yellowToRed / turnOffYellowTurnOnRed
+red -> green : redToGreen / turnOffRedTurnOnGreen
