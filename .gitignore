@@ -8,8 +8,5 @@
 bin/
 *.xmi
 
-# EMF
-src-gen/
-
-# XTend
-xtend-gen/
+# EMF or XTend
+**/*gen/
