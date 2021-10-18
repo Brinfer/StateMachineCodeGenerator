@@ -6,7 +6,7 @@ import org.eclipse.xtext.xtext.generator.model.project.*
 var rootPath = ".."
 
 Workflow {
-	
+
 	component = XtextGenerator {
 		configuration = {
 			project = StandardProjectConfig {
@@ -32,9 +32,9 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "fr.eseo.idm.state_machine_code_generator.language.StateMachineCodeGenerator"
-			fileExtensions = "smcg"
+			fileExtensions = "plantuml"
 			referencedResource = "platform:/resource/fr.eseo.idm.state_machine_code_generator/model/state_machine_code_generator.genmodel"
-			
+
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 
 			formatter = {

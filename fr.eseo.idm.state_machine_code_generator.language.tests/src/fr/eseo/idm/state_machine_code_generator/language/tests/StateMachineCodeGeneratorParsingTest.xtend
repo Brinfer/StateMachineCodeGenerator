@@ -4,7 +4,7 @@
 package fr.eseo.idm.state_machine_code_generator.language.tests
 
 import com.google.inject.Inject
-import fr.eseo.idm.state_machine_code_generator.language.smcg.SMCG
+import fr.eseo.idm.state_machine_code_generator.language.plantuml.PLANTUML
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.XtextRunner
 import org.eclipse.xtext.testing.util.ParseHelper
@@ -16,8 +16,8 @@ import org.junit.runner.RunWith
 @InjectWith(StateMachineCodeGeneratorInjectorProvider)
 class StateMachineCodeGeneratorParsingTest {
 	@Inject
-	ParseHelper<SMCG> parseHelper
-	
+	ParseHelper<PLANTUML> parseHelper
+
 	@Test
 	def void loadModel() {
 		val result = parseHelper.parse('''
