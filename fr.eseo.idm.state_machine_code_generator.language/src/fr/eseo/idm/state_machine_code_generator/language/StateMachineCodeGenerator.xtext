@@ -9,9 +9,9 @@ StateMachine:
 
 Element:
     State | Transition;
-
+    
 State:
-    'state' name=ID '\n';
+    'state' name=ID ('<<choice>>' | '\n')?;
 
 Event:
     name=ID;
@@ -21,3 +21,17 @@ Action:
 
 Transition:
     states+=[State] '->' states+=[State] ':' event=Event '/' (action=Action)? '\n';
+
+// TODO support EOF, Comment and Comment Block, support @startuml / @enduml
+
+//@Override
+//terminal ML_COMMENT :
+//    "/'" -> "'/";
+//
+//@Override 
+//terminal SL_COMMENT :
+//    "'" !('\n'|'\r')* ('\r'? '\n')?;
+//
+//@Override 
+//terminal WS :
+//    (' '|'\t'|'\r'|'\n' | '@')+;
