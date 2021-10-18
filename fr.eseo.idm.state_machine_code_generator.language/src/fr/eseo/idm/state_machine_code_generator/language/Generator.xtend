@@ -1,6 +1,5 @@
 package fr.eseo.idm.state_machine_code_generator.language
 
-import fr.eseo.idm.state_machine_code_generator.Event
 import fr.eseo.idm.state_machine_code_generator.State
 import fr.eseo.idm.state_machine_code_generator.StateMachine
 import fr.eseo.idm.state_machine_code_generator.State_machine_code_generatorPackage
@@ -16,8 +15,6 @@ import java.util.Map
 import java.util.Set
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
-import java.util.List
-import java.util.ArrayList
 import java.util.Arrays
 
 class Generator {
@@ -44,12 +41,12 @@ class Generator {
         StateMachineCodeGeneratorStandaloneSetup.doSetup
 
         val ressources = rs.getResource(
-            URI.createFileURI("tests/fr/eseo/idm/state_machine_code_generator/language/trafficLights.smcg"), true)
+            URI.createFileURI("tests/fr/eseo/idm/state_machine_code_generator/language/trafficLights.plantuml"), true)
 
         val sm = ressources.getContents().get(0) as StateMachine;
 
         val generator = new Generator(sm, "TrafficLight");
-        generator.generate("./gen/src/TrafficLight/");
+        generator.generate("./gen/src/");
 
     }
 
@@ -127,7 +124,7 @@ class Generator {
             this.actionFunction.put(t.action.name, new ActionFunction(t.action.name, "int"));
 
             val l_tempEvent = new EventFunction(t.event.name, "int");
-            l_tempEvent.isStatic = this.stateMachineName;
+            l_tempEvent.isExtern = this.stateMachineName;
 
             this.eventFunction.put(t.event.name, l_tempEvent);
             stateSet.add(t.states.get(0) as State);
@@ -151,10 +148,21 @@ class Generator {
                         "const MqMsg" + this.stateMachineName + "*", "p_msg"), "int"));
         }
 
-        this.publicFunction.put("new", new Function(this.stateMachineName + "_new", "int"));
-        this.publicFunction.put("free", new Function(this.stateMachineName + "_free", "int"));
-        this.publicFunction.put("start", new Function(this.stateMachineName + "_start", "int"));
-        this.publicFunction.put("stop", new Function(this.stateMachineName + "_stop", "int"));
+        var l_tempPublic = new Function("new", "int");
+        l_tempPublic.isExtern = this.stateMachineName;
+        this.publicFunction.put("new", l_tempPublic);
+
+        l_tempPublic = new Function("free", "int");
+        l_tempPublic.isExtern = this.stateMachineName;
+        this.publicFunction.put("free", l_tempPublic);
+
+        l_tempPublic = new Function("start", "int");
+        l_tempPublic.isExtern = this.stateMachineName;
+        this.publicFunction.put("start", l_tempPublic);
+
+        l_tempPublic = new Function("stop", "int");
+        l_tempPublic.isExtern = this.stateMachineName;
+        this.publicFunction.put("stop", l_tempPublic);
     }
 
     def private decoration(String p_decoration) {

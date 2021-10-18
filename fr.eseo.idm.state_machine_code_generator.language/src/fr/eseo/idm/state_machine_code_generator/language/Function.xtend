@@ -34,9 +34,13 @@ class Function {
         return this.isStatic;
     }
 
-    def setIsStatic(String p_moduleName) {
-        this.isStatic = true;
+    def setIsExtern(String p_moduleName) {
+        this.isStatic = false;
         this.name = p_moduleName + "_" + this.name;
+    }
+    
+    def setIsExtern() {
+        this.isStatic = false;
     }
 
     def String getName() {
